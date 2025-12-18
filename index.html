@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Combat Arena — Boxe, MMA & plus</title>
+  <meta name="description" content="Landing page immersive pour sports de combat : boxe anglaise, MMA, muay thaï, JJB. Animations premium en CSS & JavaScript." />
+  styles.css
+</head>
+<body>
+  <!-- Lien d'évitement (accessibilité) -->
+  #mainAller au contenu</a>
+
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader">
+      <span class="logo">CA</span>
+      <span class="ring"></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation principale">
+      #heroCombat Arena</a>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème" title="Thème">
+        <span class="sun">☀️</span><span class="moon">🌙</span>
+      </button>
+      <ul class="nav-links">
+        <li>#disciplinesDisciplines</a></li>
+        <li>#programmeProgramme</a></li>
+        <li>#coachsCoachs</a></li>
+        <li>#tarifsTarifs</a></li>
+        <li><a hrefai gratuit</a></li>
+      </ul>
+      <div class="active-indicator" aria-hidden="true"></div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="hero" class="section hero" aria-label="Section d'introduction">
+      <canvas id="sparks" class="sparks" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <h1 class="glitch" data-scramble>
+          Déchaîne ton <span class="accent">potentiel</span>
+        </h1>
+        <p class="subtitle">
+          Boxe anglaise • MMA • Muay Thaï • Jiu‑Jitsu brésilien
+        </p>
+        <div class="hero-cta">
+          #ctaRéserver un essai gratuit</a>
+          #disciplinesDécouvrir les disciplines</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats reveal">
+          <div class="stat">
+            <span class="number" data-target="250">0</span>
+            <span class="label">adhérents</span>
+          </div>
+          <div class="stat">
+            <span class="number" data-target="35">0</span>
+            <span class="label">cours / semaine</span>
+          </div>
+          <div class="stat">
+            <span class="number" data-target="8">0</span>
+            <span class="label">coach experts</span>
+          </div>
+        </div>
+
+        <!-- Marquee -->
+        <div class="marquee" aria-label="Partenaires">
+          <div class="track">
+            <span>Everlast</span><span>Venum</span><span>RDX</span><span>Fairtex</span><span>Hayabusa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="divider reveal" aria-hidden="true">
+      <svg viewBox="0 0 1200 100" preserveAspectRatio="none" role="img" aria-label="Décor séparateur">
+        <path class="line" d="M0,50 C300,0 900,100 1200,50" fill="none" stroke="currentColor" stroke-width="3"/>
+      </svg>
+    </div>
+
+    <!-- DISCIPLINES -->
+    <section id="disciplines" class="section" aria-labelledby="disciplines-title">
+      <h2 id="disciplines-title" class="section-title" data-scramble>Disciplines</h2>
+      <p class="section-desc">Choisis ta voie, maîtrise l'art du combat.</p>
+      <div class="grid">
+        <article class="card tilt reveal">
+          <h3>Boxe anglaise</h3>
+          <p>Travail du pied, précision des frappes, cardio et esprit stratégique.</p>
+          #programmeVoir les cours →</a>
+        </article>
+        <article class="card tilt reveal">
+          <h3>MMA</h3>
+          <p>Grappin, lutte et striking — la polyvalence totale du combattant moderne.</p>
+          #programmeVoir les cours →</a>
+        </article>
+        <article class="card tilt reveal">
+          <h3>Muay Thaï</h3>
+          <p>Le royaume des coudes et des genoux. Puissance, rythme et clinch.</p>
+          #programmeVoir les cours →</a>
+        </article>
+        <article class="card tilt reveal">
+          <h3>Jiu‑Jitsu brésilien</h3>
+          <p>Contrôle au sol, soumissions techniques et lecture des positions.</p>
+          #programmeVoir les cours →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROGRAMME -->
+    <section id="programme" class="section" aria-labelledby="programme-title">
+      <h2 id="programme-title" class="section-title" data-scramble>Programme & horaires</h2>
+      <p class="section-desc">Des sessions pour tous niveaux, du débutant au compétiteur.</p>
+      <div class="schedule grid">
+        <article class="slot reveal tilt">
+          <h3>Matin intensif</h3>
+          <p>06:30 — 08:00 • Cardio & technique</p>
+          <span class="badge">Tous niveaux</span>
+        </article>
+        <article class="slot reveal tilt">
+          <h3>Midi technique</h3>
+          <p>12:00 — 13:30 • Focus sur le geste</p>
+          <span class="badge">Intermédiaire</span>
+        </article>
+        <article class="slot reveal tilt">
+          <h3>Soir sparring</h3>
+          <p>19:00 — 21:00 • Assauts encadrés</p>
+          <span class="badge">Avancé</span>
+        </article>
+        <article class="slot reveal tilt">
+          <h3>Week-end mix</h3>
+          <p>10:00 — 12:00 • Cross-discipline</p>
+          <span class="badge">Tous niveaux</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- COACHS -->
+    <section id="coachs" class="section" aria-labelledby="coachs-title">
+      <h2 id="coachs-title" class="section-title" data-scramble>Nos coachs</h2>
+      <p class="section-desc">Encadrement par des passionnés et compétiteurs chevronnés.</p>
+      <div class="coachs grid">
+        <article class="coach card reveal tilt">
+          <h3>Amine "The Fox"</h3>
+          <p>Boxe & MMA • 12 ans d'expérience • Pédagogie & précision.</p>
+        </article>
+        <article class="coach card reveal tilt">
+          <h3>Lucia "Elbow Queen"</h3>
+          <p>Muay Thaï • Ex-pro • Clinch et rythme.</p>
+        </article>
+        <article class="coach card reveal tilt">
+          <h3>Bruno "Grip Master"</h3>
+          <p>JJB • Ceinture noire • Contrôle & soumissions.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section id="tarifs" class="section" aria-labelledby="tarifs-title">
+      <h2 id="tarifs-title" class="section-title" data-scramble>Tarifs</h2>
+      <p class="section-desc">Choisis l'offre qui te convient.</p>
+      <div class="pricing grid">
+        <article class="price card reveal tilt">
+          <h3>Starter</h3>
+          <p class="price-value"><span class="currency">€</span>39<span class="unit">/mois</span></p>
+          <ul class="features">
+            <li>2 cours / semaine</li>
+            <li>Accès gym</li>
+            <li>Sans engagement</li>
+          </ul>
+          #ctaChoisir</a>
+        </article>
+        <article class="price card reveal tilt popular">
+          <h3>Warrior</h3>
+          <p class="price-value"><span class="currency">€</span>69<span class="unit">/mois</span></p>
+          <ul class="features">
+            <li>Illimité</li>
+            <li>Sparring encadré</li>
+            <li>Plan d'entraînement</li>
+          </ul>
+          <a hrefisir</a>
+        </article>
+        <article class="price card reveal tilt">
+          <h3>Elite</h3>
+          <p class="price-value"><span class="currency">€</span>99<span class="unit">/mois</span></p>
+          <ul class="features">
+            <li>Coaching individuel</li>
+            <li>Suivi nutrition</li>
+            <li>Accès 24/7</li>
+          </ul>
+          #ctaChoisir</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section cta" aria-labelledby="cta-title">
+      <h2 id="cta-title" class="section-title" data-scramble>Prêt à monter sur le ring ?</h2>
+      <p class="section-desc">Réserve un essai gratuit et découvre l'ambiance Combat Arena.</p>
+      <form class="cta-form reveal" aria-label="Formulaire d'essai gratuit" onsubmit="event.preventDefault(); alert('Merci ! Nous te contactons très vite.');">
+        <div class="form-row">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" placeholder="Ton nom" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="ton@email.fr" required />
+        </div>
+        <div class="form-row">
+          <label for="discipline">Discipline</label>
+          <select id="discipline" name="discipline" required>
+            <option value="Boxe">Boxe anglaise</option>
+            <option value="MMA">MMA</option>
+            <option value="Muay">Muay Thaï</option>
+            <option value="JJB">Jiu‑Jitsu brésilien</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Réserver</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Combat Arena — Paris. Tous droits réservés.</p>
+    <p><small>Respecte le mouvement : si ton navigateur préfère réduire les animations, nous les limitons automatiquement.</small></p>
+  </footer>
+
+  script.js</script>
+</body>
+</
