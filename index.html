@@ -2,235 +2,148 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Combat Arena — Boxe, MMA & plus</title>
-  <meta name="description" content="Landing page immersive pour sports de combat : boxe anglaise, MMA, muay thaï, JJB. Animations premium en CSS & JavaScript." />
-  styles.css
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fight Club 2025</title>
+<style>
+/* ===== RESET & VARIABLES ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0e0f12;--text:#f9f9f9;--accent:#ff3b3b;--accent2:#ff9f1a;
+  --font:'Inter',sans-serif;
+}
+body{
+  font-family:var(--font);background:var(--bg);color:var(--text);
+  line-height:1.4;overflow-x:hidden;
+}
+/* ===== HEADER ===== */
+header{
+  position:fixed;top:0;width:100%;padding:20px 40px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(0,0,0,.4);backdrop-filter:blur(10px);z-index:100;
+}
+header h1{font-size:22px;font-weight:700;color:var(--accent)}
+nav a{color:var(--text);text-decoration:none;margin:0 14px;font-size:14px;position:relative}
+nav a::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent);transition:.3s}
+nav a:hover::after{width:100%}
+/* ===== HERO ===== */
+.hero{
+  height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+  padding:0 20px;position:relative;
+}
+.hero h2{
+  font-size:clamp(48px,10vw,120px);font-weight:900;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;color:transparent;
+  margin-bottom:20px;
+}
+.hero p{font-size:20px;color:#ccc;margin-bottom:30px}
+.btn{
+  display:inline-block;padding:14px 28px;margin:10px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#fff;font-weight:bold;border-radius:8px;text-decoration:none;
+  transition:.3s;font-size:16px;
+}
+.btn:hover{filter:brightness(1.2);transform:scale(1.05)}
+canvas#bgCanvas{position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1}
+/* ===== SECTIONS ===== */
+section{padding:100px 20px;text-align:center;max-width:1200px;margin:auto}
+h3{font-size:36px;margin-bottom:20px;font-weight:700}
+p.section-desc{font-size:18px;color:#aaa;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{
+  background:#1a1f29;border-radius:12px;padding:30px;transition:.3s;color:#ccc;
+}
+.card:hover{transform:translateY(-6px);box-shadow:0 0 20px rgba(255,45,45,.3)}
+footer{text-align:center;padding:40px;color:#666;font-size:14px}
+</style>
 </head>
 <body>
-  <!-- Lien d'évitement (accessibilité) -->
-  #mainAller au contenu</a>
+<header>
+  <h1>Fight Club 2025</h1>
+  <nav>
+    #aboutÀ propos</a>
+    #programProgramme</a>
+    #joinRejoindre</a>
+  </nav>
+</header>
 
-  <!-- Preloader -->
-  <div id="preloader" aria-hidden="true">
-    <div class="loader">
-      <span class="logo">CA</span>
-      <span class="ring"></span>
-    </div>
+<section class="hero">
+  <canvas id="bgCanvas"></canvas>
+  <h2 data-scramble>Libère ta puissance</h2>
+  <p>Boxe • MMA • Muay Thaï • Jiu-Jitsu</p>
+  #joinCommencer maintenant</a>
+</section>
+
+<section id="about">
+  <h3>Pourquoi nous choisir ?</h3>
+  <p class="section-desc">Une expérience immersive, des coachs experts et une communauté soudée.</p>
+  <div class="grid">
+    <div class="card">Entraînements personnalisés</div>
+    <div class="card">Ambiance motivante</div>
+    <div class="card">Résultats rapides</div>
   </div>
+</section>
 
-  <header class="site-header">
-    <nav class="nav" aria-label="Navigation principale">
-      #heroCombat Arena</a>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème" title="Thème">
-        <span class="sun">☀️</span><span class="moon">🌙</span>
-      </button>
-      <ul class="nav-links">
-        <li>#disciplinesDisciplines</a></li>
-        <li>#programmeProgramme</a></li>
-        <li>#coachsCoachs</a></li>
-        <li>#tarifsTarifs</a></li>
-        <li><a hrefai gratuit</a></li>
-      </ul>
-      <div class="active-indicator" aria-hidden="true"></div>
-    </nav>
-  </header>
+<section id="program">
+  <h3>Programme 2025</h3>
+  <p class="section-desc">Des sessions adaptées à tous les niveaux.</p>
+  <div class="grid">
+    <div class="card">Matin intensif • 06h30</div>
+    <div class="card">Midi technique • 12h00</div>
+    <div class="card">Soir sparring • 19h00</div>
+  </div>
+</section>
 
-  <main id="main">
-    <!-- HERO -->
-    <section id="hero" class="section hero" aria-label="Section d'introduction">
-      <canvas id="sparks" class="sparks" aria-hidden="true"></canvas>
-      <div class="hero-content">
-        <h1 class="glitch" data-scramble>
-          Déchaîne ton <span class="accent">potentiel</span>
-        </h1>
-        <p class="subtitle">
-          Boxe anglaise • MMA • Muay Thaï • Jiu‑Jitsu brésilien
-        </p>
-        <div class="hero-cta">
-          #ctaRéserver un essai gratuit</a>
-          #disciplinesDécouvrir les disciplines</a>
-        </div>
+<section id="join">
+  <h3>Prêt à combattre ?</h3>
+  <p class="section-desc">Rejoins-nous et commence ton voyage dès aujourd'hui.</p>
+  #Je m'inscris</a>
+</section>
 
-        <!-- Stats -->
-        <div class="stats reveal">
-          <div class="stat">
-            <span class="number" data-target="250">0</span>
-            <span class="label">adhérents</span>
-          </div>
-          <div class="stat">
-            <span class="number" data-target="35">0</span>
-            <span class="label">cours / semaine</span>
-          </div>
-          <div class="stat">
-            <span class="number" data-target="8">0</span>
-            <span class="label">coach experts</span>
-          </div>
-        </div>
+<footer>© <span id="year"></span> Fight Club 2025 — Paris</footer>
 
-        <!-- Marquee -->
-        <div class="marquee" aria-label="Partenaires">
-          <div class="track">
-            <span>Everlast</span><span>Venum</span><span>RDX</span><span>Fairtex</span><span>Hayabusa</span>
-          </div>
-        </div>
-      </div>
-    </section>
+<script>
+// YEAR
+document.getElementById('year').textContent=new Date().getFullYear();
 
-    <!-- DIVIDER -->
-    <div class="divider reveal" aria-hidden="true">
-      <svg viewBox="0 0 1200 100" preserveAspectRatio="none" role="img" aria-label="Décor séparateur">
-        <path class="line" d="M0,50 C300,0 900,100 1200,50" fill="none" stroke="currentColor" stroke-width="3"/>
-      </svg>
-    </div>
+// SCRAMBLE EFFECT
+const letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+document.querySelectorAll('[data-scramble]').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{
+    const original=el.textContent;let i=0;
+    const interval=setInterval(()=>{
+      el.textContent=original.split('').map((ch,idx)=>idx<i?ch:letters[Math.floor(Math.random()*letters.length)]).join('');
+      i++;if(i>original.length){clearInterval(interval);el.textContent=original;}
+    },30);
+  });
+});
 
-    <!-- DISCIPLINES -->
-    <section id="disciplines" class="section" aria-labelledby="disciplines-title">
-      <h2 id="disciplines-title" class="section-title" data-scramble>Disciplines</h2>
-      <p class="section-desc">Choisis ta voie, maîtrise l'art du combat.</p>
-      <div class="grid">
-        <article class="card tilt reveal">
-          <h3>Boxe anglaise</h3>
-          <p>Travail du pied, précision des frappes, cardio et esprit stratégique.</p>
-          #programmeVoir les cours →</a>
-        </article>
-        <article class="card tilt reveal">
-          <h3>MMA</h3>
-          <p>Grappin, lutte et striking — la polyvalence totale du combattant moderne.</p>
-          #programmeVoir les cours →</a>
-        </article>
-        <article class="card tilt reveal">
-          <h3>Muay Thaï</h3>
-          <p>Le royaume des coudes et des genoux. Puissance, rythme et clinch.</p>
-          #programmeVoir les cours →</a>
-        </article>
-        <article class="card tilt reveal">
-          <h3>Jiu‑Jitsu brésilien</h3>
-          <p>Contrôle au sol, soumissions techniques et lecture des positions.</p>
-          #programmeVoir les cours →</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- PROGRAMME -->
-    <section id="programme" class="section" aria-labelledby="programme-title">
-      <h2 id="programme-title" class="section-title" data-scramble>Programme & horaires</h2>
-      <p class="section-desc">Des sessions pour tous niveaux, du débutant au compétiteur.</p>
-      <div class="schedule grid">
-        <article class="slot reveal tilt">
-          <h3>Matin intensif</h3>
-          <p>06:30 — 08:00 • Cardio & technique</p>
-          <span class="badge">Tous niveaux</span>
-        </article>
-        <article class="slot reveal tilt">
-          <h3>Midi technique</h3>
-          <p>12:00 — 13:30 • Focus sur le geste</p>
-          <span class="badge">Intermédiaire</span>
-        </article>
-        <article class="slot reveal tilt">
-          <h3>Soir sparring</h3>
-          <p>19:00 — 21:00 • Assauts encadrés</p>
-          <span class="badge">Avancé</span>
-        </article>
-        <article class="slot reveal tilt">
-          <h3>Week-end mix</h3>
-          <p>10:00 — 12:00 • Cross-discipline</p>
-          <span class="badge">Tous niveaux</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- COACHS -->
-    <section id="coachs" class="section" aria-labelledby="coachs-title">
-      <h2 id="coachs-title" class="section-title" data-scramble>Nos coachs</h2>
-      <p class="section-desc">Encadrement par des passionnés et compétiteurs chevronnés.</p>
-      <div class="coachs grid">
-        <article class="coach card reveal tilt">
-          <h3>Amine "The Fox"</h3>
-          <p>Boxe & MMA • 12 ans d'expérience • Pédagogie & précision.</p>
-        </article>
-        <article class="coach card reveal tilt">
-          <h3>Lucia "Elbow Queen"</h3>
-          <p>Muay Thaï • Ex-pro • Clinch et rythme.</p>
-        </article>
-        <article class="coach card reveal tilt">
-          <h3>Bruno "Grip Master"</h3>
-          <p>JJB • Ceinture noire • Contrôle & soumissions.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- TARIFS -->
-    <section id="tarifs" class="section" aria-labelledby="tarifs-title">
-      <h2 id="tarifs-title" class="section-title" data-scramble>Tarifs</h2>
-      <p class="section-desc">Choisis l'offre qui te convient.</p>
-      <div class="pricing grid">
-        <article class="price card reveal tilt">
-          <h3>Starter</h3>
-          <p class="price-value"><span class="currency">€</span>39<span class="unit">/mois</span></p>
-          <ul class="features">
-            <li>2 cours / semaine</li>
-            <li>Accès gym</li>
-            <li>Sans engagement</li>
-          </ul>
-          #ctaChoisir</a>
-        </article>
-        <article class="price card reveal tilt popular">
-          <h3>Warrior</h3>
-          <p class="price-value"><span class="currency">€</span>69<span class="unit">/mois</span></p>
-          <ul class="features">
-            <li>Illimité</li>
-            <li>Sparring encadré</li>
-            <li>Plan d'entraînement</li>
-          </ul>
-          <a hrefisir</a>
-        </article>
-        <article class="price card reveal tilt">
-          <h3>Elite</h3>
-          <p class="price-value"><span class="currency">€</span>99<span class="unit">/mois</span></p>
-          <ul class="features">
-            <li>Coaching individuel</li>
-            <li>Suivi nutrition</li>
-            <li>Accès 24/7</li>
-          </ul>
-          #ctaChoisir</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="section cta" aria-labelledby="cta-title">
-      <h2 id="cta-title" class="section-title" data-scramble>Prêt à monter sur le ring ?</h2>
-      <p class="section-desc">Réserve un essai gratuit et découvre l'ambiance Combat Arena.</p>
-      <form class="cta-form reveal" aria-label="Formulaire d'essai gratuit" onsubmit="event.preventDefault(); alert('Merci ! Nous te contactons très vite.');">
-        <div class="form-row">
-          <label for="name">Nom</label>
-          <input id="name" name="name" type="text" placeholder="Ton nom" required />
-        </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="ton@email.fr" required />
-        </div>
-        <div class="form-row">
-          <label for="discipline">Discipline</label>
-          <select id="discipline" name="discipline" required>
-            <option value="Boxe">Boxe anglaise</option>
-            <option value="MMA">MMA</option>
-            <option value="Muay">Muay Thaï</option>
-            <option value="JJB">Jiu‑Jitsu brésilien</option>
-          </select>
-        </div>
-        <button class="btn btn-primary" type="submit">Réserver</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Combat Arena — Paris. Tous droits réservés.</p>
-    <p><small>Respecte le mouvement : si ton navigateur préfère réduire les animations, nous les limitons automatiquement.</small></p>
-  </footer>
-
-  script.js</script>
+// CANVAS BACKGROUND PARTICLES
+const canvas=document.getElementById('bgCanvas'),ctx=canvas.getContext('2d');
+let W,H,particles=[];
+function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;}
+resize();window.addEventListener('resize',resize);
+class Particle{
+  constructor(x,y,vx,vy,life,color){this.x=x;this.y=y;this.vx=vx;this.vy=vy;this.life=life;this.color=color;}
+  step(){this.life--;this.x+=this.vx;this.y+=this.vy;this.vy+=0.02;}
+  draw(){ctx.beginPath();ctx.arc(this.x,this.y,2,0,Math.PI*2);ctx.fillStyle=this.color;ctx.fill();}
+}
+function burst(x,y){
+  for(let i=0;i<20;i++){
+    const ang=Math.random()*Math.PI*2,speed=Math.random()*3+1;
+    particles.push(new Particle(x,y,Math.cos(ang)*speed,Math.sin(ang)*speed,50,`hsl(${Math.random()*360},100%,50%)`));
+  }
+}
+canvas.addEventListener('click',e=>burst(e.clientX,e.clientY));
+function loop(){
+  ctx.clearRect(0,0,W,H);
+  particles=particles.filter(p=>p.life>0);
+  particles.forEach(p=>{p.step();p.draw();});
+  requestAnimationFrame(loop);
+}
+looploop();
+</script>
 </body>
+
 </
